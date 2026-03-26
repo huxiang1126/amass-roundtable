@@ -8,28 +8,37 @@
 
 ## 安装
 
-### 方式一：一键安装（推荐）
+### 第一步：下载
+
+打开「终端」应用（Mac 在「启动台」→「其他」→「终端」），粘贴以下命令：
 
 ```bash
+cd ~/Desktop
 git clone https://github.com/huxiang1126/amass-roundtable.git
-cd amass-roundtable
-bash setup.sh /你的项目目录
 ```
 
-### 方式二：手动安装
+桌面会出现一个 `amass-roundtable` 文件夹。
+
+### 第二步：安装到你的项目
+
+假设你想在桌面建一个叫 `圆桌会议` 的文件夹来使用，在终端继续输入：
 
 ```bash
-# 1. 复制 Skill 文件到项目的 .claude/skills/roundtable/ 目录
-mkdir -p /你的项目目录/.claude/skills/roundtable
-cp roundtable.md /你的项目目录/.claude/skills/roundtable/SKILL.md
-
-# 2. 创建圆桌数据目录
-mkdir -p /你的项目目录/roundtable/minutes
-mkdir -p /你的项目目录/roundtable/roles
-
-# 3. 复制扩展角色（可选）
-cp setup/roles/*.md /你的项目目录/roundtable/roles/
+mkdir -p ~/Desktop/圆桌会议
+cd ~/Desktop/amass-roundtable
+bash setup.sh ~/Desktop/圆桌会议
 ```
+
+看到 `安装完成！` 就装好了。
+
+### 第三步：在 Claude Code 桌面应用中打开
+
+1. 打开 **Claude Code 桌面应用**
+2. 点击左上角的项目名称（或新建对话时选择项目目录）
+3. 选择刚才创建的 `圆桌会议` 文件夹
+4. 在对话框输入 `/roundtable` ，如果出现命令提示，说明安装成功
+
+> **重要**：必须选择安装了 Skill 的那个文件夹作为项目目录，否则 Claude Code 找不到 `/roundtable` 命令。
 
 ---
 
@@ -37,7 +46,7 @@ cp setup/roles/*.md /你的项目目录/roundtable/roles/
 
 ### 启动会议
 
-在 Claude Code 中输入：
+在 Claude Code 对话框中输入：
 
 ```
 /roundtable 门店店长绩效怎么考核
@@ -54,6 +63,8 @@ cp setup/roles/*.md /你的项目目录/roundtable/roles/
 首次启动会进入**公司信息对齐**流程。三位高管会轮流向你提问，了解公司基本盘、组织架构、经营现状和核心痛点。
 
 对齐完成后，信息会保存到 `roundtable/company-profile.md`，后续会议自动加载，不需要重复介绍。
+
+> **提示**：对齐过程中直接打字回答即可，不需要每次都加 `/roundtable` 前缀。只有第一次启动会议时需要输入 `/roundtable`。
 
 ### 会议中指令
 
