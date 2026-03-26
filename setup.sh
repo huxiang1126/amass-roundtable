@@ -12,10 +12,10 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 
 # 1. 安装 Skill 文件
-SKILL_DIR="$PROJECT_DIR/.claude/skills"
+SKILL_DIR="$PROJECT_DIR/.claude/skills/roundtable"
 mkdir -p "$SKILL_DIR"
-cp "$(dirname "$0")/roundtable.md" "$SKILL_DIR/roundtable.md"
-echo "✅ Skill 文件已安装到 $SKILL_DIR/roundtable.md"
+cp "$(dirname "$0")/roundtable.md" "$SKILL_DIR/SKILL.md"
+echo "✅ Skill 文件已安装到 $SKILL_DIR/SKILL.md"
 
 # 2. 创建圆桌会议数据目录
 RT_DIR="$PROJECT_DIR/roundtable"

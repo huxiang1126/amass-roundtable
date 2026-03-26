@@ -19,9 +19,9 @@ bash setup.sh /你的项目目录
 ### 方式二：手动安装
 
 ```bash
-# 1. 复制 Skill 文件到项目的 .claude/skills/ 目录
-mkdir -p /你的项目目录/.claude/skills
-cp roundtable.md /你的项目目录/.claude/skills/
+# 1. 复制 Skill 文件到项目的 .claude/skills/roundtable/ 目录
+mkdir -p /你的项目目录/.claude/skills/roundtable
+cp roundtable.md /你的项目目录/.claude/skills/roundtable/SKILL.md
 
 # 2. 创建圆桌数据目录
 mkdir -p /你的项目目录/roundtable/minutes
